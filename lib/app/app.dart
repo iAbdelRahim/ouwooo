@@ -27,7 +27,7 @@ class _MainAppState extends State<MainApp> {
       title: 'GkGk',
       // theme: MyAppThemeData[themeService.currentTheme.value],
       getPages: AppRouting.appRoutes,
-      initialRoute: Routes.test,
+      initialRoute: Routes.home,
       // initialRoute: Routes.login,
     );
   }

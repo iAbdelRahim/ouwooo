@@ -31,8 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Expanded(
-                  child: Column(
+              child: Column(
                 children: [
                   FormBuilder(
                     child: FormBuilderTextField(
@@ -86,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ],
-              )),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
