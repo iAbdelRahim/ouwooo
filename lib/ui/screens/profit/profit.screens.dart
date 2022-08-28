@@ -9,14 +9,14 @@ import 'package:gk_gk/app/routes.dart';
 import 'package:gk_gk/ui/screens/profit/vip1.screens.dart';
 import 'package:gk_gk/ui/screens/profit/vip2.screens%20.dart';
 
-class profitScreen extends StatefulWidget {
-  const profitScreen({Key? key}) : super(key: key);
+class ProfitScreen extends StatefulWidget {
+  const ProfitScreen({Key? key}) : super(key: key);
 
   @override
-  State<profitScreen> createState() => _profitScreenState();
+  State<ProfitScreen> createState() => _ProfitScreenState();
 }
 
-class _profitScreenState extends State<profitScreen> {
+class _ProfitScreenState extends State<ProfitScreen> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -26,28 +26,91 @@ class _profitScreenState extends State<profitScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Column(
-            children: [
-              Center(
-                child: Text("Profit"),
-              ),
-            ],
-          ),
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                text: "vip1",
-              ),
-              Tab(
-                text: "Vip2",
-              ),
-            ],
-          ),
+          elevation: 0.0,
+          title: Center(
+              child: Text(style: TextStyle(color: Colors.white), "PROFITS")),
         ),
-        body: TabBarView(
+        body: Column(
           children: [
-            Vip1(),
-            Vip2(),
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
+                children: [
+                  Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Image(
+                          image: AssetImage(
+                              "assets/images/transparent-person.png"),
+                          height: height * 0.05,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 14.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                                style: TextStyle(color: Colors.white),
+                                "Adhésion: "),
+                            Image(
+                              image: AssetImage("assets/images/vip.png"),
+                              height: height * 0.02,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                                style: TextStyle(color: Colors.white),
+                                "Tâche réalisable: "),
+                            Text(style: TextStyle(color: Colors.white), "123"),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                                style: TextStyle(color: Colors.white),
+                                "Date de l'adhésion: "),
+                            Text(
+                                style: TextStyle(color: Colors.white),
+                                "01-01-2022"),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: TabBar(
+                tabs: [
+                  Tab(
+                    text: "vip1",
+                  ),
+                  Tab(
+                    text: "Vip2",
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: width,
+              height: height / 2,
+              child: TabBarView(
+                children: [
+                  Vip1(),
+                  Vip2(),
+                ],
+              ),
+            ),
           ],
         ),
         bottomNavigationBar: Container(

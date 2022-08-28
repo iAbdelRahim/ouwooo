@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+import 'package:gk_gk/app/routes.dart';
 
 class Vip1 extends StatefulWidget {
   const Vip1({Key? key}) : super(key: key);
@@ -83,7 +85,9 @@ class _Vip1State extends State<Vip1> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton.icon(
-                            onPressed: () => {},
+                            onPressed: () => {
+                              Get.offNamed(Routes.hall)
+                            },
                             icon: Icon(Icons.facebook, color: Colors.white),
                             label: Text(
                                 style: TextStyle(
@@ -117,7 +121,9 @@ class _Vip1State extends State<Vip1> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton.icon(
-                            onPressed: () => {},
+                            onPressed: () => {
+                              Get.offNamed(Routes.hall)
+                            },
                             icon: Icon(Icons.facebook, color: Colors.white),
                             label: Text(
                                 style: TextStyle(
@@ -152,7 +158,9 @@ class _Vip1State extends State<Vip1> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton.icon(
-                            onPressed: () => {},
+                            onPressed: () => {
+                              Get.offNamed(Routes.hall)
+                            },
                             icon: Icon(Icons.facebook, color: Colors.white),
                             label: Text(
                                 style: TextStyle(
