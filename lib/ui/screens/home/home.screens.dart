@@ -692,7 +692,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.offNamed(Routes.account);
+              },
               icon: const Icon(
                 Icons.person_outline,
                 color: Colors.white,

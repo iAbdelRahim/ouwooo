@@ -167,7 +167,9 @@ class _ProfitScreenState extends State<ProfitScreen> {
               ),
               IconButton(
                 enableFeedback: false,
-                onPressed: () {},
+                onPressed: () {
+                  Get.offNamed(Routes.account);
+                },
                 icon: const Icon(
                   Icons.person_outline,
                   color: Colors.white,

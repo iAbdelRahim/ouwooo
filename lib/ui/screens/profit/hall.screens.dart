@@ -939,7 +939,9 @@ class _HallScreenState extends State<HallScreen> {
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.offNamed(Routes.account);
+              },
               icon: const Icon(
                 Icons.person_outline,
                 color: Colors.white,
