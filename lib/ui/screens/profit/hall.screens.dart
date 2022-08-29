@@ -930,7 +930,9 @@ class _HallScreenState extends State<HallScreen> {
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.offNamed(Routes.task);
+              },
               icon: const Icon(
                 Icons.find_in_page_outlined,
                 color: Colors.white,

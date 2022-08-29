@@ -149,7 +149,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     Column(
                       children: [
                         IconButton(
-                            onPressed: () => {},
+                            onPressed: () => {Get.offNamed(Routes.withdrawal)},
                             icon: Icon(Icons.account_balance_wallet_outlined)),
                         Text("Withdrawal"),
                       ],

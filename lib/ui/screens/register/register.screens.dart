@@ -5,14 +5,14 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
 import 'package:gk_gk/app/routes.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -33,14 +33,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   fit: BoxFit.cover,
                 )),
             Container(
-              margin: EdgeInsets.only(top: width * 0.09),
-              child: Text(
-                  style: TextStyle(
-                      fontSize: width * 0.08, fontWeight: FontWeight.bold),
-                  "Welcome back !"),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: height * 0.03),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(
                   Radius.circular(25),
@@ -82,8 +74,65 @@ class _LoginScreenState extends State<LoginScreen> {
                           name: 'Login password',
                           decoration: InputDecoration(
                             suffixIcon: Icon(Icons.visibility_sharp),
-                            label: Text('Password'),
+                            label: Text('Login password'),
                             hintText: 'please enter your password',
+                          ),
+                          onChanged: ((value) => value),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        // color: Colors.blue[50],
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
+                      child: FormBuilder(
+                        child: FormBuilderTextField(
+                          name: 'Confirm password',
+                          decoration: InputDecoration(
+                            label: Text('Confirm password'),
+                            suffixIcon: Icon(Icons.visibility_sharp),
+                            hintText: 'please enter your password',
+                          ),
+                          onChanged: ((value) => value),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        // color: Colors.blue[50],
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
+                      child: FormBuilder(
+                        child: FormBuilderTextField(
+                          name: 'Invitation code',
+                          decoration: InputDecoration(
+                            label: Text('invitation code'),
+                          ),
+                          onChanged: ((value) => value),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(6.0),
+                      decoration: BoxDecoration(
+                        // color: Colors.blue[50],
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(25),
+                        ),
+                      ),
+                      child: FormBuilder(
+                        child: FormBuilderTextField(
+                          name: 'Verification code',
+                          decoration: InputDecoration(
+                            label: Text('Verification code'),
+                            hintText: 'please enter a verification code',
                           ),
                           onChanged: ((value) => value),
                         ),
@@ -114,7 +163,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Get.offNamed(Routes.home);
                       },
                       child: Center(
-                        child: Text('Login'),
+                        child: Text('Register'),
                       ),
                     ),
                     ElevatedButton(
@@ -146,12 +195,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         Text(
-                          "Not registered yet ?",
+                          "Have account ?",
                         ),
                         SizedBox(
                           child: TextButton(
-                              onPressed: () => {Get.offNamed(Routes.register)},
-                              child: Text("REGISTER")),
+                              onPressed: () => {Get.offNamed(Routes.login)},
+                              child: Text("LOGIN")),
                         ),
                         IconButton(
                           onPressed: () => {},

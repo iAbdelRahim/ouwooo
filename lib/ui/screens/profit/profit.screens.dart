@@ -127,7 +127,7 @@ class _ProfitScreenState extends State<ProfitScreen> {
             children: [
               IconButton(
                 enableFeedback: false,
-                onPressed: () {},
+                onPressed: () {Get.offNamed(Routes.home);},
                 icon: const Icon(
                   Icons.home_outlined,
                   color: Colors.white,
@@ -158,7 +158,7 @@ class _ProfitScreenState extends State<ProfitScreen> {
               ),
               IconButton(
                 enableFeedback: false,
-                onPressed: () {},
+                onPressed: () {Get.offNamed(Routes.task);},
                 icon: const Icon(
                   Icons.find_in_page_outlined,
                   color: Colors.white,
