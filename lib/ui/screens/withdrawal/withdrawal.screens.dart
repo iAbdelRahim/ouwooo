@@ -21,7 +21,7 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () => {},
+          onPressed: () => {Get.toNamed(Routes.account)},
           icon: Icon(Icons.arrow_back),
         ),
         title: Center(
@@ -101,7 +101,7 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
                                 onPressed: () {
                                   // Inscription
 
-                                  Get.offNamed(Routes.home);
+                                  Get.toNamed(Routes.home);
                                 },
                                 child: Center(
                                   child: Text('Submit'),
@@ -204,7 +204,7 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.home);
+                Get.toNamed(Routes.home);
               },
               icon: const Icon(
                 Icons.home_outlined,
@@ -217,7 +217,7 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
               onPressed: () {
                 // gains
 
-                Get.offNamed(Routes.profit);
+                Get.toNamed(Routes.profit);
               },
               icon: const Icon(
                 Icons.account_balance_wallet_outlined,
@@ -227,9 +227,11 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.vip);
+              },
               icon: const Icon(
-                Icons.widgets_outlined,
+                Icons.military_tech_outlined,
                 color: Colors.white,
                 size: 35,
               ),
@@ -237,7 +239,7 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.task);
+                Get.toNamed(Routes.task);
               },
               icon: const Icon(
                 Icons.find_in_page_outlined,
@@ -248,7 +250,7 @@ class _WithdrawalScreenState extends State<WithdrawalScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.account);
+                Get.toNamed(Routes.account);
               },
               icon: const Icon(
                 Icons.person_outline,

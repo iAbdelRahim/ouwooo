@@ -149,7 +149,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     Column(
                       children: [
                         IconButton(
-                            onPressed: () => {Get.offNamed(Routes.withdrawal)},
+                            onPressed: () => {Get.toNamed(Routes.withdrawal)},
                             icon: Icon(Icons.account_balance_wallet_outlined)),
                         Text("Withdrawal"),
                       ],
@@ -496,7 +496,7 @@ class _AccountScreenState extends State<AccountScreen> {
                     children: [
                       SizedBox(
                         child: TextButton(
-                          onPressed: () => {Get.offNamed(Routes.login)},
+                          onPressed: () => {Get.toNamed(Routes.login)},
                           child: Text(
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -527,7 +527,7 @@ class _AccountScreenState extends State<AccountScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.home);
+                Get.toNamed(Routes.home);
               },
               icon: const Icon(
                 Icons.home_outlined,
@@ -540,7 +540,7 @@ class _AccountScreenState extends State<AccountScreen> {
               onPressed: () {
                 // gains
 
-                Get.offNamed(Routes.profit);
+                Get.toNamed(Routes.profit);
               },
               icon: const Icon(
                 Icons.account_balance_wallet_outlined,
@@ -550,16 +550,20 @@ class _AccountScreenState extends State<AccountScreen> {
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.vip);
+              },
               icon: const Icon(
-                Icons.widgets_outlined,
+                Icons.military_tech_outlined,
                 color: Colors.white,
                 size: 35,
               ),
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.account);
+              },
               icon: const Icon(
                 Icons.find_in_page_outlined,
                 color: Colors.white,
@@ -569,7 +573,7 @@ class _AccountScreenState extends State<AccountScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.account);
+                Get.toNamed(Routes.account);
               },
               icon: const Icon(
                 Icons.person_outline,

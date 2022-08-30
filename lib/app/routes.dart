@@ -11,4 +11,5 @@ abstract class Routes {
   static const account = '/account';
   static const withdrawal = '/withdrawal';
   static const task = '/task';
+  static const vip = '/vip';
 }

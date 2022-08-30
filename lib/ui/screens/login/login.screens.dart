@@ -23,15 +23,16 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
           children: [
             SizedBox(
-                height: height / 3,
-                // width: width,
-                child: FittedBox(
-                  child: Image.asset(
-                    'assets/images/pocket.png',
-                    fit: BoxFit.cover,
-                  ),
+              height: height / 3,
+              // width: width,
+              child: FittedBox(
+                child: Image.asset(
+                  'assets/images/pocket.png',
                   fit: BoxFit.cover,
-                )),
+                ),
+                fit: BoxFit.cover,
+              ),
+            ),
             Container(
               margin: EdgeInsets.only(top: width * 0.09),
               child: Text(
@@ -99,38 +100,43 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
+                    Container(
+                      margin: EdgeInsets.all(5),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(width, height * 0.075),
+                          shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(18.0),
                           ),
                         ),
-                      ),
-                      onPressed: () {
-                        // Inscription
+                        onPressed: () {
+                          // Inscription
 
-                        Get.offNamed(Routes.home);
-                      },
-                      child: Center(
-                        child: Text('Login'),
-                      ),
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
+                          Get.offNamed(Routes.home);
+                        },
+                        child: Padding(
+                          padding: EdgeInsets.all(5),
+                          child: Center(
+                            child: Text('Login'),
                           ),
                         ),
                       ),
-                      onPressed: () => {},
-                      child: Center(
-                        child: Text('Download APP'),
-                      ),
                     ),
+                    // Container(
+                    //   margin: EdgeInsets.all(5),
+                    //   child: ElevatedButton(
+                    //     style: ElevatedButton.styleFrom(
+                    //       minimumSize: Size(width, height * 0.075),
+                    //       shape: RoundedRectangleBorder(
+                    //         borderRadius: BorderRadius.circular(18.0),
+                    //       ),
+                    //     ),
+                    //     onPressed: () => {},
+                    //     child: Center(
+                    //       child: Text('Download APP'),
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

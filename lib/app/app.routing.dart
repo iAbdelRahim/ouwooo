@@ -8,6 +8,7 @@ import 'package:gk_gk/ui/screens/profit/hall.screens.dart';
 import 'package:gk_gk/ui/screens/account/account.screens.dart';
 import 'package:gk_gk/ui/screens/register/register.screens.dart';
 import 'package:gk_gk/ui/screens/tasks/task.screens.dart';
+import 'package:gk_gk/ui/screens/vip/vip.screens.dart';
 
 import '../ui/screens/withdrawal/withdrawal.screens.dart';
 
@@ -64,6 +65,12 @@ class AppRouting {
     GetPage(
       name: Routes.task,
       page: () => const TaskScreen(),
+      transition: Transition.fade,
+      transitionDuration: const Duration(milliseconds: 350),
+    ),
+    GetPage(
+      name: Routes.vip,
+      page: () => const VipScreen(),
       transition: Transition.fade,
       transitionDuration: const Duration(milliseconds: 350),
     ),

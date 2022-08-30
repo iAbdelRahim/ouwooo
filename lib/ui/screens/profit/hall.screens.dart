@@ -20,7 +20,7 @@ class _HallScreenState extends State<HallScreen> {
           child: Text("Hall"),
         ),
         leading: IconButton(
-          onPressed: () => {Get.offNamed(Routes.profit)},
+          onPressed: () => {Get.toNamed(Routes.profit)},
           icon: Icon(Icons.arrow_back),
         ),
       ),
@@ -899,7 +899,9 @@ class _HallScreenState extends State<HallScreen> {
           children: [
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.home);
+              },
               icon: const Icon(
                 Icons.home_outlined,
                 color: Colors.white,
@@ -911,7 +913,7 @@ class _HallScreenState extends State<HallScreen> {
               onPressed: () {
                 // gains
 
-                Get.offNamed(Routes.profit);
+                Get.toNamed(Routes.profit);
               },
               icon: const Icon(
                 Icons.account_balance_wallet_outlined,
@@ -921,9 +923,11 @@ class _HallScreenState extends State<HallScreen> {
             ),
             IconButton(
               enableFeedback: false,
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(Routes.vip);
+              },
               icon: const Icon(
-                Icons.widgets_outlined,
+                Icons.military_tech,
                 color: Colors.white,
                 size: 35,
               ),
@@ -931,7 +935,7 @@ class _HallScreenState extends State<HallScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.task);
+                Get.toNamed(Routes.task);
               },
               icon: const Icon(
                 Icons.find_in_page_outlined,
@@ -942,7 +946,7 @@ class _HallScreenState extends State<HallScreen> {
             IconButton(
               enableFeedback: false,
               onPressed: () {
-                Get.offNamed(Routes.account);
+                Get.toNamed(Routes.account);
               },
               icon: const Icon(
                 Icons.person_outline,

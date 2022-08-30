@@ -16,7 +16,9 @@ class _CompletedScreenState extends State<CompletedScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Text("data"),
+            Container(
+              child: Image.asset("assets/images/nothing.png"),
+            )
           ],
         ),
       ),

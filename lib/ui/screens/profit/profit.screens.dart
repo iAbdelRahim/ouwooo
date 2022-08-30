@@ -91,6 +91,7 @@ class _ProfitScreenState extends State<ProfitScreen> {
             Container(
               decoration: BoxDecoration(color: Colors.blue),
               child: TabBar(
+                indicatorColor: Colors.white,
                 tabs: [
                   Tab(
                     text: "vip1",
@@ -127,7 +128,9 @@ class _ProfitScreenState extends State<ProfitScreen> {
             children: [
               IconButton(
                 enableFeedback: false,
-                onPressed: () {Get.offNamed(Routes.home);},
+                onPressed: () {
+                  Get.toNamed(Routes.home);
+                },
                 icon: const Icon(
                   Icons.home_outlined,
                   color: Colors.white,
@@ -139,7 +142,7 @@ class _ProfitScreenState extends State<ProfitScreen> {
                 onPressed: () {
                   // gains
 
-                  Get.offNamed(Routes.profit);
+                  Get.toNamed(Routes.profit);
                 },
                 icon: const Icon(
                   Icons.account_balance_wallet_outlined,
@@ -149,16 +152,20 @@ class _ProfitScreenState extends State<ProfitScreen> {
               ),
               IconButton(
                 enableFeedback: false,
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(Routes.vip);
+                },
                 icon: const Icon(
-                  Icons.widgets_outlined,
+                  Icons.military_tech_outlined,
                   color: Colors.white,
                   size: 35,
                 ),
               ),
               IconButton(
                 enableFeedback: false,
-                onPressed: () {Get.offNamed(Routes.task);},
+                onPressed: () {
+                  Get.toNamed(Routes.task);
+                },
                 icon: const Icon(
                   Icons.find_in_page_outlined,
                   color: Colors.white,
@@ -168,7 +175,7 @@ class _ProfitScreenState extends State<ProfitScreen> {
               IconButton(
                 enableFeedback: false,
                 onPressed: () {
-                  Get.offNamed(Routes.account);
+                  Get.toNamed(Routes.account);
                 },
                 icon: const Icon(
                   Icons.person_outline,
